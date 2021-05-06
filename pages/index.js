@@ -1,10 +1,10 @@
-import { Intro } from "../blockPages";
-import MainLayout from "../layout/MainLayout";
+import React, { useState, useEffect } from "react";
 
-export default function Home() {
+function HomePage() {
+  
   return (
-    <MainLayout>
-      <Intro />
-    </MainLayout>
+    <div></div>
   );
 }
+
+export default HomePage;
