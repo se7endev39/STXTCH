@@ -20,9 +20,9 @@ function Filter() {
     return (
         <div className="pt-6 px-2">
             <div>
-                <MDBBtn color="elegant" className="btn_view_all"> View All </MDBBtn>
-                <MDBBtn color="elegant" outline className="btn_view_all"> Tags <img src={down_icon} className="down_icon"/> </MDBBtn>
-                <MDBBtn color="elegant" outline className="btn_view_all"> By Date </MDBBtn>
+                <MDBBtn color="elegant" className="black btn-radius-40"> View All </MDBBtn>
+                <MDBBtn color="elegant" outline className="outline btn-radius-40"> Tags <img src={down_icon} className="down_icon"/> </MDBBtn>
+                <MDBBtn color="elegant" outline className="outline btn-radius-40"> By Date </MDBBtn>
             </div>
         </div>
     )

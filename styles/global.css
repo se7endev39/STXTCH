@@ -54,7 +54,7 @@ body{
     height: 40px;
     padding-top: 0px !important;
     padding-bottom: 0px !important;
-    background: #1E2023;
+    /* background: #1E2023; */
 }
 
 .down_icon{
@@ -90,18 +90,29 @@ body{
 }
 
 .MDBbtn{
+    padding: 0 1rem 0 1rem;
     height: 50px;
     font-size: 16px;
     text-align: center;
+    margin-right: 0.5rem
+    /* padding: 0 10px 0 10px; */
 }
 
-.MDBbtn .black{
+.MDBbtn.black{
     color: #fff;
     background-color: #2e2e2e !important;
 }
 
-.MDBbtn .outline{
+.MDBbtn.outline{
     color: #2e2e2e !important;
     background-color: transparent !important;
     border: 2px solid #2e2e2e !important;
+}
+
+.btn-radius-10{
+    border-radius: 10px;
+}
+
+.btn-radius-40{
+    border-radius: 40px;
 }
