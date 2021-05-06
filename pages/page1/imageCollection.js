@@ -6,7 +6,7 @@ import styles from './index.module.css';
 const Image = ({width, src, title, comment}) => {
     return (
     <div className={styles.Image} style={{width}}>
-        <img src={src} className="rounded-xl"></img>
+        <img src={src} className="rounded-xl" style={{width: "-webkit-fill-available"}}></img>
         <div className={styles.image_texts}>
             {title && (
                 <div className={styles.image_title}>{title}</div>
