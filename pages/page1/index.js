@@ -55,7 +55,7 @@ function Mobile() {
                 <div className={"pl-4 m-auto lg:m-0 " + styles.slogan}>
                     A powerful story can change the world.
                 </div>
-                <MDBBtn color="elegant" className="MDBbtn btn-radius-10 ml-5 mt-4">
+                <MDBBtn color="elegant" className="black btn-radius-10 ml-5 mt-4">
                     explore stories
                 </MDBBtn>
             </div>
