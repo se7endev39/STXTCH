@@ -4,7 +4,7 @@ import {useRouter} from 'next/router'
 function HomePage() {
   const router = useRouter()
   useEffect(() => {
-    router.push(`/Mobile`)
+    router.push(`/page1`)
   }, [])
 
   return (

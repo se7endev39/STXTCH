@@ -90,5 +90,18 @@ body{
 }
 
 .MDBbtn{
-    
+    height: 500px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.MDBbtn .black{
+    color: #fff;
+    background-color: #2e2e2e !important;
+}
+
+.MDBbtn .outline{
+    color: #2e2e2e !important;
+    background-color: transparent !important;
+    border: 2px solid #2e2e2e !important;
 }
