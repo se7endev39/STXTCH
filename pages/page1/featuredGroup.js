@@ -16,10 +16,10 @@ function FeaturedGroup() {
             <div className="featured_group_stories py-3">
                 {stories} Stories Told
             </div>
-            <MDBBtn color="elegant" className="MDBbtn btn-radius-10">
+            <MDBBtn color="elegant" className="black btn-radius-10">
                 group stories
             </MDBBtn>
-            <div className="featured_group_detail">
+            <div className="featured_group_detail pt-4">
 
             </div>
             <div className="divider"></div>
