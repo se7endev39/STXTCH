@@ -65,7 +65,6 @@ body {
   font-size: 12px;
 }
 
-
 /* Common */
 .color-primary {
   color: #3aa0c0;
@@ -197,13 +196,13 @@ input:-webkit-autofill:active {
   /* width: 180px; */
   height: 42px;
 }
-.dropdown-btn{
+.dropdown-btn {
   height: 42px;
 }
-.dropdown-btn img{
+.dropdown-btn img {
   margin: auto;
 }
-.dropdown-btn img{
+.dropdown-btn img {
   height: 10px;
 }
 
@@ -421,8 +420,6 @@ input:-webkit-autofill:active {
   line-height: normal;
 }
 
-/* MySourcer page */
-
 .mys-container {
   padding-top: 84px;
   /* padding-bottom: 100px; */
@@ -591,10 +588,10 @@ input:-webkit-autofill:active {
     /* width: 143px; */
     height: 36px;
   }
-  .dropdown-btn{
+  .dropdown-btn {
     height: 36px;
   }
-  .dropdown-btn img{
+  .dropdown-btn img {
     height: 8px;
   }
 
@@ -706,10 +703,10 @@ input:-webkit-autofill:active {
     /* width: 110px; */
     height: 28px;
   }
-  .dropdown-btn{
+  .dropdown-btn {
     height: 28px;
   }
-  .dropdown-btn img{
+  .dropdown-btn img {
     height: 5px;
   }
   .nav-login {
