@@ -10,7 +10,7 @@ export default (props) => {
     var path = window.location.pathname;
     var pn = path.split("/").pop();
     setPageName(pn);
-  })
+  }, [])
   if (process.browser) {
   }
 

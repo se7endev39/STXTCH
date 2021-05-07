@@ -77,8 +77,8 @@ function SearchResult() {
     return (
         <div className="pt-4">
             {
-                results?.map( each => (
-                    <SearchItem {...each} />
+                results?.map( (each, index) => (
+                    <SearchItem key={index} {...each} />
                 ) )
             }
         </div>
