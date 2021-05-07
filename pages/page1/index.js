@@ -48,7 +48,7 @@ const statistics = {
 
 function Page1() {
   return (
-    <div className="flex flex-grow 2xl:p-0 lg:flex-row flex-col">
+    <div className="flex flex-grow 2xl:p-0 flex-col">
       <div className={styles.screen1}></div>
       <div className="divider"></div>
       <div className="mt-8">
