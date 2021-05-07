@@ -6,6 +6,7 @@ import Verizon from 'components/Page1/Verizon';
 import Statistics from 'components/Page1/Statistics'
 import SearchGroup from 'components/Page1/SearchGroup';
 import FeaturedGroup from 'components/Page1/FeaturedGroup'
+import Footer from 'components/Page1/Footer';
 
 const images = [
   {
@@ -47,11 +48,11 @@ const statistics = {
 
 function Page1() {
   return (
-    <div className="flex flex-grow 2xl:p-0 pb-6 lg:flex-row flex-col">
+    <div className="flex flex-grow 2xl:p-0 lg:flex-row flex-col">
       <div className={styles.screen1}></div>
       <div className="divider"></div>
       <div className="mt-8">
-        <div className={"pl-4 m-auto lg:m-0 " + styles.slogan}>
+        <div className={"px-4 m-auto lg:m-0 " + styles.slogan}>
           A powerful story can change the world.
         </div>
         <MDBBtn color="elegant" className="black btn-radius-10 ml-5 mt-4">
@@ -64,7 +65,8 @@ function Page1() {
       <SearchGroup />
       <div className="divider border-grey"></div>
       <FeaturedGroup />
-      <div className="divider border-grey"></div>
+      {/* <div className="divider border-grey"></div> */}
+      <Footer />
     </div>
   );
 }
