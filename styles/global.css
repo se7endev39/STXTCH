@@ -42,15 +42,6 @@ body{
     line-height: 18px;
 }
 
-.searchbar .searchtext{
-    font-size: 18px;
-    font-weight: 700;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #1E2023;
-}
-
-
 /******  page1/searchgroup  *****/
 
 .btn_view_all{
@@ -99,4 +90,18 @@ body{
 
 .image-keep-orig{
     min-width: fit-content;
+}
+
+.custom_scroll::-webkit-scrollbar {
+    height: 5px;
+}
+
+.custom_scroll::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 50px;
+}
+
+.custom_scroll::-webkit-scrollbar-thumb {
+    background-color: #1E2023;
+    border-radius: 50px;
 }

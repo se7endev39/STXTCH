@@ -1,20 +1,8 @@
 import React from 'react';
-import search_icon from "assets/images/search.svg";
 import down_icon from "assets/images/down.svg";
-import MDBBtn from 'components/MDBbtn'
-import SearchItem from 'components/ImageDescriptedOut'
-
-function SearchBar() {
-  return (
-    <div className="searchbar">
-      <div className="flex justify-center items-center pb-2">
-        <img src={search_icon}/>
-        <div className="searchtext">SEARCH GROUPS</div>
-      </div>
-      <div className="divider" />
-    </div>
-  );
-}
+import MDBBtn from 'components/MDBbtn';
+import SearchItem from 'components/ImageDescriptedOut';
+import SearchBar from '../SearchBar';
 
 function Filter() {
   return (
@@ -47,7 +35,8 @@ const results = [
   {
     src: "/images/page1/9.svg",
     comment: "Astra-Zeneca-Research",
-    stories: 3342
+    stories: 3342,
+    play: true
   },
   {
     src: "/images/page1/10.svg",
@@ -76,7 +65,7 @@ function SearchResult() {
 function SearchGroup() {
   return (
     <div className="pb-10">
-      <SearchBar />
+      <SearchBar/>
       <Filter />
       <SearchResult />
     </div>

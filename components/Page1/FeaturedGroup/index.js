@@ -55,15 +55,15 @@ const FeaturedGroup = (props) => {
   let data = props.data
   if( !data ) data = data_fake
   return (
-    <div className={"py-8 px-4 flex " + styles.FeaturedGroup} style={{overflowX: "auto"}}>
+    <div className={"py-8 px-4 flex custom_scroll " + styles.FeaturedGroup} style={{overflowX: "auto"}}>
       {
         data.map((each, index) => (
-          <div className="flex">
+          <div className="flex" key={index}>
           {
             index > 0 &&
               <div className={styles.splitter}/>
           }
-          <FeaturedItem key={index} {...each}  />
+            <FeaturedItem {...each}  />
           </div>
         ))
       }
