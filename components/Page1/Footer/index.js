@@ -16,7 +16,7 @@ const Footer = (props) => {
             <div className={styles.title + " pb-8"}>
                 What inspires you to write your story?
             </div>
-            <MDBBtn color="elegant" className="black btn-radius-10 mb-8">
+            <MDBBtn color="elegant" className="black btn-radius-10">
                 about stxtch
             </MDBBtn>
             <Gallery data={data}/>
