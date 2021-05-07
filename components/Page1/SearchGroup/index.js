@@ -75,11 +75,10 @@ function SearchResult() {
 
 function SearchGroup() {
   return (
-    <div className="pb-4">
+    <div className="pb-10">
       <SearchBar />
       <Filter />
       <SearchResult />
-      <div className="divider mt-6" style={{borderColor:"#7C7D83"}}></div>
     </div>
   )
 }

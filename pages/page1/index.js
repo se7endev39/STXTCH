@@ -62,7 +62,9 @@ function Page1() {
       <Verizon />
       <Statistics statistics={statistics} />
       <SearchGroup />
+      <div className="divider border-grey"></div>
       <FeaturedGroup />
+      <div className="divider border-grey"></div>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../../../components/ImageDescriptedIn'
+import Image from '../../ImageDescriptedIn'
 
 const ImageCollection = (props) => {
   return (

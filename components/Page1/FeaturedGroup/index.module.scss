@@ -1,0 +1,36 @@
+.FeaturedGroup{
+    overflow-x: auto;
+
+}
+
+.title{
+    font-family: Mulish Italic;
+    font-size: 42px;
+    line-height: 42px;
+}
+
+.description{
+    font-size: 18px;
+}
+
+.detail{
+    width: max-content;
+
+    &_text{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 370px;
+        font-size: 35px;
+        line-height: 160%;
+        color: #1E2023;
+    }
+}
+
+
+.splitter{
+    height: 140px;
+    border-left: 1px solid #7C7D83;
+    padding-right: 1rem;
+    align-self: flex-end;
+    margin-bottom: 3rem;
+}
