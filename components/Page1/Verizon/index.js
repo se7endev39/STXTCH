@@ -1,7 +1,6 @@
 import React from 'react';
-import styles from './index.module.css';
-import MDBBtn from './MDBbtn'
-import verizon_logo from "../../assets/images/verizon.svg";
+import styles from './index.module.scss';
+import verizon_logo from "assets/images/verizon.svg";
 
 function Verizon() {
   return (

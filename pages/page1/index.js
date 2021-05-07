@@ -1,12 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
-import styles from './index.module.css';
-import MDBBtn from './MDBbtn'
-import ImageCollection from './imageCollection';
-import Verizon from './Verizon';
-import Statistics from './statistics'
-import SearchGroup from './searchGroup';
-import FeaturedGroup from './featuredGroup'
+import styles from './index.module.scss';
+import MDBBtn from 'components/MDBbtn'
+import ImageCollection from 'components/Page1/ImageCollection';
+import Verizon from 'components/Page1/Verizon';
+import Statistics from 'components/Page1/Statistics'
+import SearchGroup from 'components/Page1/SearchGroup';
+import FeaturedGroup from 'components/Page1/FeaturedGroup'
 
 const images = [
   {
@@ -46,7 +45,7 @@ const statistics = {
   "Affirmations_Given": 423
 }
 
-function Mobile() {
+function Page1() {
   return (
     <div className="flex flex-grow 2xl:p-0 pb-6 lg:flex-row flex-col">
       <div className={styles.screen1}></div>
@@ -59,9 +58,7 @@ function Mobile() {
           explore stories
         </MDBBtn>
       </div>
-      <ImageCollection 
-        images={images}
-      />
+      <ImageCollection images={images} />
       <Verizon />
       <Statistics statistics={statistics} />
       <SearchGroup />
@@ -70,4 +67,4 @@ function Mobile() {
   );
 }
 
-export default Mobile;
+export default Page1;

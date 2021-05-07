@@ -1,8 +1,8 @@
 import React from 'react';
-import search_icon from "../../assets/images/search.svg";
-import down_icon from "../../assets/images/down.svg";
-import MDBBtn from './MDBbtn'
-
+import search_icon from "assets/images/search.svg";
+import down_icon from "assets/images/down.svg";
+import MDBBtn from 'components/MDBbtn'
+import SearchItem from 'components/ImageDescriptedOut'
 
 function SearchBar() {
   return (
@@ -23,18 +23,6 @@ function Filter() {
         <MDBBtn color="elegant" className="black btn-radius-40"> View All </MDBBtn>
         <MDBBtn color="elegant" outline className="outline btn-radius-40"> Tags <img src={down_icon} className="down_icon"/> </MDBBtn>
         <MDBBtn color="elegant" outline className="outline btn-radius-40"> By Date </MDBBtn>
-      </div>
-    </div>
-  )
-}
-
-function SearchItem({src, comment, stories}) {
-  return (
-    <div className="m-auto pb-4" style={{width: "90%"}}>
-      <img src={src} className="search_item_img"  style={{width: "-webkit-fill-available"}}/>
-      <div className="search_item_caption flex justify-between">
-        <div className="search_item_comment">#{comment}</div>
-        <div className="search_item_stories">{stories.toLocaleString("en")} stories</div>
       </div>
     </div>
   )

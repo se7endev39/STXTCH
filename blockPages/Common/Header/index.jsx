@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Logo from "../../../assets/images/logo.svg";
 import More from "../../../assets/images/more.svg";
 
-export default (props) => {
+const Header = (props) => {
 
   const [pageName, setPageName] = useState("");
   useEffect(() => {  
@@ -25,3 +25,5 @@ export default (props) => {
     </nav>
   );
 }
+
+export default Header

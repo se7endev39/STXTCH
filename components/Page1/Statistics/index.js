@@ -1,6 +1,6 @@
 import React from 'react';
-import icon_users from "../../assets/images/page1/users.svg";
-import icon_hands from "../../assets/images/page1/hands.svg";
+import icon_users from "assets/images/page1/users.svg";
+import icon_hands from "assets/images/page1/hands.svg";
 
 function Statistics({statistics}) {
   return (

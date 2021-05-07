@@ -1,5 +1,5 @@
 import React from 'react';
-import MDBBtn from './MDBbtn'
+import MDBBtn from '../../../components/MDBbtn'
 
 const title = "DearMusicIn TheMaking"
 const stories = 123
