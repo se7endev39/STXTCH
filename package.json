@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "next": "10.2.0",
     "next-images": "^1.7.0",
     "postcss-preset-env": "^6.7.0",

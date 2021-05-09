@@ -3,13 +3,14 @@ import search_icon from "assets/images/search.svg";
 import cross_icon from "assets/images/cross.svg";
 import styles from './index.module.scss'
 
-function SearchBar() {
+function SearchBar({onQueryChange}) {
 
   const [query, setQuery] = useState("")
 
   
   const onChange = (event) => {
     let newQuery = event.target.value
+    onQueryChange(newQuery)
     setQuery(newQuery)
   }
 

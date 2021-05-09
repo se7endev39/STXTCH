@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import down_icon from "assets/images/down.svg";
 import MDBBtn from 'components/MDBbtn';
 import SearchItem from 'components/ImageDescriptedOut';
 import SearchBar from '../SearchBar';
 import styles from './index.module.scss'
 import FeaturedGroup from '../FeaturedGroup';
+import debounce from 'lodash/debounce'
 
 function Filter() {
   return (
@@ -18,7 +19,33 @@ function Filter() {
   )
 }
 
-const results = [
+
+function SearchResult({data}) {
+  // insert FeatureGroup in results
+  let insertPos = data.length / 3 * 2;
+  let data_ = [...data]
+  if(data.length > 5) 
+    data_.splice(insertPos, 0, "FeaturedGroup")
+  return (
+    <div className="pt-4">
+      {
+        data_?.map( (each, index) => {
+          return each == "FeaturedGroup"
+          ? (
+            <div key={"FeaturedGroup"}>
+              <div className="divider border-grey"/>
+              <FeaturedGroup />
+              <div className="divider border-grey pb-12"/>
+            </div>)
+          : (<SearchItem key={index} {...each} />)
+        } )
+      }
+    </div>
+  )
+}
+
+
+const results_fake = [
   {
     src: "/images/page1/6.svg",
     comment: "LoveCampaign",
@@ -67,35 +94,20 @@ const results = [
   },
 ]
 
-function SearchResult(props) {
-  // insert FeatureGroup in results
-  let insertPos = results.length / 3 * 2;
-  let results_ = [...results]
-  results_.splice(insertPos, 0, "FeaturedGroup")
-  return (
-    <div className="pt-4">
-      {
-        results_?.map( (each, index) => {
-          return index != insertPos 
-          ? (<SearchItem key={index} {...each} />)
-          : (
-            <div>
-              <div className="divider border-grey"/>
-              <FeaturedGroup />
-              <div className="divider border-grey pb-12"/>
-            </div>)
-        } )
-      }
-    </div>
-  )
-}
-
 function SearchGroup(props) {
+
+  let [results, setResults] = useState(results_fake)
+  
+  let onQueryChange = debounce((query) => {
+    let results_filter = results_fake.filter( (result) => result.comment.toLowerCase().includes(query.toLowerCase()) )
+    setResults(results_filter)
+  }, 200)
+
   return (
     <div className="pb-10">
-      <SearchBar/>
+      <SearchBar onQueryChange={onQueryChange}/>
       <Filter />
-      <SearchResult>
+      <SearchResult data={results}>
         { props.children }
       </SearchResult>
     </div>

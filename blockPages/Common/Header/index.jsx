@@ -1,27 +1,30 @@
 import React, { useEffect, useState } from "react";
 import Link from 'next/link';
 import Logo from "../../../assets/images/logo.svg";
-import More from "../../../assets/images/more.svg";
+import Menu_icon from "../../../assets/images/menu.svg";
+import Menu from '../Menu'
+import styles from './index.module.scss'
 
 const Header = (props) => {
 
   const [pageName, setPageName] = useState("");
-  useEffect(() => {  
-    var path = window.location.pathname;
-    var pn = path.split("/").pop();
-    setPageName(pn);
-  }, [])
-  if (process.browser) {
+  const [menuOpened, setMenuOpened] = useState(false)
+
+  let toggleMenu = () => {
+    setMenuOpened(!menuOpened)
   }
 
   return (
-    <nav className="flex-wrap top-nav">
+    <nav className={"top-nav " + (menuOpened ? styles.openedMenu : "")}>
       <div className="flex items-start xl:items-center justify-between ">
         <div className="flex relative nav-logo">
           <Link href="/"><img className="cursor-pointer logo" src={Logo} alt="Logo" /></Link>
         </div>
-        <div className="flex items-end dropdown-btn"><img className="cursor-pointer" src={More} alt="More" /></div>
+        <div className="flex items-end dropdown-btn" onClick={toggleMenu}>
+          <img className="cursor-pointer" src={Menu_icon} alt="Menu" />
+        </div>
       </div>
+      { menuOpened && <Menu onMenuClicked={toggleMenu}/> }
     </nav>
   );
 }

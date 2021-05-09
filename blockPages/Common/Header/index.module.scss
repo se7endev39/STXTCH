@@ -21,3 +21,13 @@
     }
   }
 }
+
+.openedMenu{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100% !important;
+  background-color: #CED3E3;
+  display: flex;
+  flex-direction: column;
+}
