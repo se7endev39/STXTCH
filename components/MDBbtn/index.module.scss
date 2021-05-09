@@ -1,0 +1,31 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+  &_Content {
+    position: absolute;
+    top: 44px;
+    width: calc(100% - 0.5rem);
+    background: whitesmoke;
+    border-radius: 19px;
+    border: 1px solid grey;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    padding: 0.5rem 0.5rem;
+    z-index: 1;
+    display: none;
+    li{
+      padding: 2px;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
+
+.dropdown:hover .dropdown_Content{
+  display: block;
+}
+
+
+
+.wrapper{
+  display: inline-block;
+}

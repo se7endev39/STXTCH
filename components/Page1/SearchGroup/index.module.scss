@@ -1,3 +1,11 @@
 .Filter{
-  overflow-x: auto;
+  overflow-x: clip;
+  position: relative;
+  &_btn{
+    height: 40px;
+  }
+}
+
+.tagMenu{
+  position: absolute;
 }

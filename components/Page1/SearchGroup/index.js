@@ -7,14 +7,27 @@ import styles from './index.module.scss'
 import FeaturedGroup from '../FeaturedGroup';
 import debounce from 'lodash/debounce'
 
+const tags_fake = [
+  "Tag 1", "Tag 2", "Tag 3"
+]
+
 function Filter() {
+  // const [tagOpened, setTagOpened] = useState(true)
+  // const toggleTagMenu = () => {
+  //   setTagOpened(!tagOpened)
+  //   console.log(tagOpened)
+  // }
   return (
     <div className={"pt-6 px-2 " + styles.Filter}>
       <div className="w-max-content">
-        <MDBBtn color="elegant" className="black btn-radius-40"> View All </MDBBtn>
-        <MDBBtn color="elegant" outline className="outline btn-radius-40"> Tags <img src={down_icon} className="down_icon"/> </MDBBtn>
-        <MDBBtn color="elegant" outline className="outline btn-radius-40"> By Date </MDBBtn>
+        <MDBBtn color="elegant" className={styles.Filter_btn + " black btn-radius-40"}> View All </MDBBtn>
+        <MDBBtn color="elegant" className={styles.Filter_btn + " outline btn-radius-40"} dropdown={true}> 
+          Tags 
+          <img src={down_icon} className="down_icon"/> 
+        </MDBBtn>
+        <MDBBtn color="elegant" className={styles.Filter_btn + " outline btn-radius-40"}> By Date </MDBBtn>
       </div>
+
     </div>
   )
 }

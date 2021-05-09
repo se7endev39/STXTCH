@@ -69,6 +69,10 @@ body{
     /* padding: 0 10px 0 10px; */
 }
 
+.MDBbtn:focus{
+    outline: none;
+}
+
 .MDBbtn.black{
     color: #fff;
     background-color: #1E2023 !important;
@@ -77,7 +81,7 @@ body{
 .MDBbtn.outline{
     color: #2e2e2e !important;
     background-color: transparent !important;
-    border: 2px solid #2e2e2e !important;
+    border: 1px solid #2e2e2e !important;
 }
 
 .btn-radius-10{
