@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Link from 'next/link';
-import Logo from "../../../assets/images/logo.svg";
-import Menu_icon from "../../../assets/images/menu.svg";
+import Logo from "assets/images/logo.svg";
+import Menu_icon from "assets/images/menu.svg";
+import Cross_icon from 'assets/images/cross_1.svg'
 import Menu from '../Menu'
 import styles from './index.module.scss'
 
@@ -20,8 +21,8 @@ const Header = (props) => {
         <div className="flex relative nav-logo">
           <Link href="/"><img className="cursor-pointer logo" src={Logo} alt="Logo" /></Link>
         </div>
-        <div className="flex items-end dropdown-btn" onClick={toggleMenu}>
-          <img className="cursor-pointer" src={Menu_icon} alt="Menu" />
+        <div className="flex items-end self-center" onClick={toggleMenu}>
+          <img className="cursor-pointer" src={ menuOpened ? Cross_icon :Menu_icon} alt="Menu" />
         </div>
       </div>
       { menuOpened && <Menu onMenuClicked={toggleMenu}/> }

@@ -16,8 +16,8 @@ function SearchBar({onQueryChange}) {
 
   return (
     <div>
-      <div className="flex justify-center items-center pb-2">
-        <img src={query?cross_icon:search_icon}/>
+      <div className="flex pl-20 pr-2 pb-5">
+        <img src={query?cross_icon:search_icon} className="pl-2"/>
         <input className={styles.searchtext} onChange={onChange} placeholder="SEARCH GROUPS" value={query}/>
       </div>
       <div className="divider" />
