@@ -4,6 +4,7 @@ import MDBBtn from 'components/MDBbtn';
 import SearchItem from 'components/ImageDescriptedOut';
 import SearchBar from '../SearchBar';
 import styles from './index.module.scss'
+import FeaturedGroup from '../FeaturedGroup';
 
 function Filter() {
   return (
@@ -49,26 +50,54 @@ const results = [
     comment: "WhiteWater",
     stories: 105
   },
+  {
+    src: "/images/page1/15.svg",
+    comment: "WhiteWater",
+    stories: 101
+  },
+  {
+    src: "/images/page1/16.svg",
+    comment: "WhiteWater",
+    stories: 101
+  },
+  {
+    src: "/images/page1/17.svg",
+    comment: "WhiteWater",
+    stories: 101
+  },
 ]
 
-function SearchResult() {
+function SearchResult(props) {
+  // insert FeatureGroup in results
+  let insertPos = results.length / 3 * 2;
+  let results_ = [...results]
+  results_.splice(insertPos, 0, "FeaturedGroup")
   return (
     <div className="pt-4">
       {
-        results?.map( (each, index) => (
-          <SearchItem key={index} {...each} />
-        ) )
+        results_?.map( (each, index) => {
+          return index != insertPos 
+          ? (<SearchItem key={index} {...each} />)
+          : (
+            <div>
+              <div className="divider border-grey"/>
+              <FeaturedGroup />
+              <div className="divider border-grey pb-12"/>
+            </div>)
+        } )
       }
     </div>
   )
 }
 
-function SearchGroup() {
+function SearchGroup(props) {
   return (
     <div className="pb-10">
       <SearchBar/>
       <Filter />
-      <SearchResult />
+      <SearchResult>
+        { props.children }
+      </SearchResult>
     </div>
   )
 }

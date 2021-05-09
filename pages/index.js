@@ -62,9 +62,10 @@ function HomePage() {
       <ImageCollection images={images} />
       <Verizon />
       <Statistics statistics={statistics} />
-      <SearchGroup />
-      <div className="divider border-grey"></div>
-      <FeaturedGroup />
+      <SearchGroup>
+        <FeaturedGroup/>
+      </SearchGroup>
+      {/* <FeaturedGroup /> */}
       {/* <div className="divider border-grey"></div> */}
       <Footer />
     </div>
