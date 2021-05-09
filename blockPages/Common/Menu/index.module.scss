@@ -10,6 +10,10 @@
     color: #1E2023;
   }
 
+  &_item:hover{
+    color: #304A9A
+  }
+
   &_bar{
     display: flex;
     flex-direction: column;
