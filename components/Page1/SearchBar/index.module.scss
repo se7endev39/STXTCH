@@ -4,5 +4,12 @@
     padding-left: 20px;
     padding-right: 20px;
     color: #1E2023;
+    background: transparent;
+    text-align: center;
+    outline: none;
+}
+
+.searchtext::placeholder{
+    color: #1E2023;
 }
 

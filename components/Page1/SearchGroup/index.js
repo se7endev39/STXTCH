@@ -3,11 +3,12 @@ import down_icon from "assets/images/down.svg";
 import MDBBtn from 'components/MDBbtn';
 import SearchItem from 'components/ImageDescriptedOut';
 import SearchBar from '../SearchBar';
+import styles from './index.module.scss'
 
 function Filter() {
   return (
-    <div className="pt-6 px-2">
-      <div>
+    <div className={"pt-6 px-2 " + styles.Filter}>
+      <div className="w-max-content">
         <MDBBtn color="elegant" className="black btn-radius-40"> View All </MDBBtn>
         <MDBBtn color="elegant" outline className="outline btn-radius-40"> Tags <img src={down_icon} className="down_icon"/> </MDBBtn>
         <MDBBtn color="elegant" outline className="outline btn-radius-40"> By Date </MDBBtn>
